@@ -26,7 +26,7 @@ import 문자열과배열.Arrytest;
 //    스스로 지지 않도록 프로그램 구성한다.
 //(3) 게임 리플레이가 되도록 한다. (게임 과정 저장 -> 게임 과정 보여주기)
 
-class GameData{
+class GameData{ // 데이터 저장 용도로 클래스 활용
 	int userIdx; //유저 ID ex) 0
 	String userValStr; //유저가 낸 값, ex) 11,12,13
 	int lastVal; //유저가 낸 마지막 값, ex) 13
@@ -58,7 +58,7 @@ public class B31Main {
 		while(true) {		
 			// (1) 현재 유저의 값을 입력받는다.
 			curNum = getCurUserVal(curUser, curNum);
-			// (2) 현재 유저의 값이 31이상이면 게임 종료
+			// (2) 현재 유저의 마지막 값이 31이상이면 게임 종료
 			if (curNum >= 31) {
 				System.out.printf("User[%d]가 패배했습니다.\n", curUser);
 				break;
