@@ -1,5 +1,6 @@
 package 기초test;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -45,7 +46,7 @@ public class MethodTest {
 		String str1 = "apple";
 		System.out.println();
 		System.out.printf("(3-5)메서드화 %s 첫글자 대문자 변경 => : %s",str1,firstUpper(str1));
-	
+		System.out.println();
 		//String[] strArray2 = {“apple”, “grape”, “mango”};
 		//(6) 문자형 배열의 각 단어별 앞글자만 모두 대문자로 바꾸도록 하시오.
 		//==> {“Apple”, “Grape”, “Mango”}
@@ -112,5 +113,5 @@ public class MethodTest {
 		return upStr.substring(0,1)+lowStr.substring(1);
 	}
 	
-	public static List<String> arrayFstUpper(String[] )
+
 }

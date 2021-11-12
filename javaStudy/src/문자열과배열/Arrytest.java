@@ -44,7 +44,6 @@ public class Arrytest {
 		scores2[0] = 10;
 		scores2[1] = 60;
 		scores2[2] = 88;
-		
 		int total=0;
 		for(int i=0; i<scores2.length;i++) { //배열의 모든 값을 참조 한다.
 			System.out.println(scores2[i]);
