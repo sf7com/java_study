@@ -29,13 +29,30 @@ public class Calendar {
 		
 		System.out.printf("     <%d년도 %d월>",year,mon);
 		System.out.println();
+		System.out.print(" ");
 		for(var dow : dayOfWeek) {
 			System.out.printf("%s",dow);
 			if(dow != "토")
 				System.out.print("  ");		
 		}
-		System.out.println(getWeek(year,mon,day));
-		
+		System.out.println();
+		for(int i=0;i<7;i++) {
+			if(i==getWeek(year,mon,1)) {
+				int firstLine = 7-getWeek(year,mon,1);
+				for(int j=1;j<=firstLine;j++) {
+					System.out.printf("%3d",j);
+				}
+				System.out.println();
+				for(int k=firstLine+1;k<=day;k++) {
+					if((k-firstLine)%7 == 0) {
+						System.out.printf("%3d",k);	
+						System.out.println();
+					}else
+					System.out.printf("%3d",k);					
+				}
+			}
+			System.out.print("   ");
+		}		
 	}
 
 	public static int getWeek(int year, int mon, int day) {
@@ -57,8 +74,5 @@ public class Calendar {
 		if(year%4==0 && (year%100!=0 || year%400==0)) 
 			result = true;
 		return result;
-	}
-
-	
-	
+	}	
 }

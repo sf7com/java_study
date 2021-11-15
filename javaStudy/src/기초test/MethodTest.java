@@ -113,5 +113,6 @@ public class MethodTest {
 		return upStr.substring(0,1)+lowStr.substring(1);
 	}
 	
+	
 
 }

@@ -58,32 +58,32 @@ public class CondTest {
 //		System.out.printf("1~1000까지 5 or 7의 배수 합 : %d",sum5n7);
 		
 		//(2-2-1) 높이 9인 다이아몬드 출력
-//		int dia=9;
-//		int center=dia/2+1;
-//		int cnt=dia;
-//		for(int i=0;i<dia;i++) {
-//			if(i<center) {
-//				for (int j = 1; j < center-i; j++) {
-//					System.out.print(" ");
-//				}
-//				for (int j = 0; j < (i * 2 + 1); j++) {
-//					System.out.print("★");
-//				}
-//				System.out.println();
-//			}
-//			if(i>=center) {
-//				cnt=cnt-2;
-//				for (int j = 0; j < i-(center-1); j++) {
-//					System.out.print(" ");
-//				}
-//				for (int j = 0; j<cnt; j++) {
-//					System.out.print("★");
-//				}
-//				System.out.println();
-//			}
-//		}	
-			//(2-2-2)속이 빈 다이아몬드 출력
-		int dia2=9;
+		int dia=9;
+		int center=dia/2+1;
+		int cnt=dia;
+		for(int i=0;i<dia;i++) {
+			if(i<center) {
+				for (int j = 1; j < center-i; j++) {
+					System.out.print(" ");
+				}
+				for (int j = 0; j < (i * 2 + 1); j++) {
+					System.out.print("★");
+				}
+				System.out.println();
+			}
+			if(i>=center) {
+				cnt=cnt-2;
+				for (int j = 0; j < i-(center-1); j++) {
+					System.out.print(" ");
+				}
+				for (int j = 0; j<cnt; j++) {
+					System.out.print("★");
+				}
+				System.out.println();
+			}
+		}	
+//			(2-2-2)속이 빈 다이아몬드 출력
+		int dia2=9; //홀수의 단수 입력하면 다이아
 		int center2=dia2/2+1;
 		int cnt2=dia2;
 		for(int i=0;i<dia2;i++) {

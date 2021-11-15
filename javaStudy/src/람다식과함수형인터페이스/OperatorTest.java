@@ -35,7 +35,8 @@ public class OperatorTest {
 		fruits.add("apple");
 		fruits.add("grape");
 		fruits.add("banana");
-		fruits.replaceAll(s->s.toUpperCase());
+		fruits.replaceAll(s->s.toUpperCase()); //전체 대문자
+		fruits.replaceAll(s->s.substring(0,1).toUpperCase()+s.substring(1)); //첫글자만 대문자
 		System.out.println(fruits);
 		
 		//과일 List에 모든 요소에
