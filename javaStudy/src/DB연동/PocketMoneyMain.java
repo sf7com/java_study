@@ -6,8 +6,8 @@ public class PocketMoneyMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		DBAccess da = new DBAccess();
 		Scanner sc = new Scanner(System.in);
+		DBAccess da = new DBAccess();
 		while(true) {
 			ScreenOut.menu();
 			switch(sc.nextLine()) {
@@ -23,6 +23,7 @@ public class PocketMoneyMain {
 				if(check.equals("1")) {
 					ScreenOut.yesMent();
 					//데이터 삽입
+					da.insertData(item, "-"+money);
 				}else {
 					ScreenOut.noMent();
 				}
@@ -42,6 +43,7 @@ public class PocketMoneyMain {
 				if(check.equals("1")) {
 					ScreenOut.yesMent();
 					//데이터 삽입
+					da.insertData(item, money);
 				}else {
 					ScreenOut.noMent();
 				}
@@ -52,7 +54,7 @@ public class PocketMoneyMain {
 			case "3" : //잔액조회
 			{
 				//잔액 조회 함수 필요
-				int balance=0;//잔액
+				int balance=da.getMoneyBalance();//잔액
 				System.out.println("\t현재 남은 잔액은 " + balance + "원 입니다.");
 				System.out.println("Enter");
 				sc.nextLine(); //엔터 누를 때까지 대기
@@ -66,7 +68,11 @@ public class PocketMoneyMain {
 				System.out.println("\t지출(수입)내역\t금액\t\t날짜");
 				System.out.println("\t" + "*".repeat(60));
 				//모든 데이터 조회
-				
+				var items = da.getAllItems();
+				for(var item : items) {
+					System.out.printf("\t%-10s\t%7s원\t%s\n",
+							item.item, item.money, item.date);
+				}
 				//
 				System.out.println("\n\t모든 조회가 완료되었습니다.");
 				System.out.println("Enter");
