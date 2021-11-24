@@ -8,6 +8,9 @@ public class ScreenOut {
 		System.out.println("\t2. 수입 입력");
 		System.out.println("\t3. 잔액 확인");
 		System.out.println("\t4. 전체 조회");
+		System.out.println("\t5. 마지막 데이터 삭제");
+		System.out.println("\t6. 상위 5개 품목별 지출 합계");
+		System.out.println("\t7. 월별 통계값");
 		System.out.println("\t0. 종료\n");
 		System.out.println("\t메뉴 번호를 입력해주세요.");
 		System.out.println("----------------------------------");
